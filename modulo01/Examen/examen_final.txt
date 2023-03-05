@@ -1,0 +1,72 @@
+Problema 01:
+    Crear un programa agenda con 3 opciones:
+        Opcion 1: Registrar agenda: 1
+        Opcion 2: Listar agenda: 2
+        Opcion 3: Salir: 3
+
+    * (Si el usuario ingresa otra opción, el sistema debe de volver a mostrar las opciones)
+
+    -Donde el usuario al momento de ingresar "1" el programa te solicite 
+    registrar nombre (Considerar la primera letra del nombre en mayúscula en caso
+    de que se ingrese en minúscula el texto y en caso el texto se encuentre vacio 
+	el programa debe de volver a solicitar), dirección (Tambien considerar la 
+    primera letra en mayúscula) y número de teléfono o celular (Validar que solo
+    se ingrese números). Al finalizar el registro, este se debe de almacenar en
+    una lista.
+
+    *(Una vez que el usuario termine de realizar el registro se debe de volver
+    a mostrar las opciones.)
+
+    -Si el usuario ingresa a la opción 2 le debe de mostrar la lista con los 
+    registros ingresados.
+
+    *(Una vez que el usuario termine de mostrar el listado se debe de volver
+    a mostrar las opciones.)
+
+    -Si el usuario ingresa la opción 3 la aplicación debe de finalizar.
+
+    *(Tener en cuenta que la aplicación no finaliza hasta seleccionar la opción 3)
+    *(Aplicar todo lo aprendido en clases.)
+
+
+Problema 02:
+	La empresa DataCorp SAC solicito la creación de un programa para sus 2 sucursales (Huancayo y Lima).
+	Donde el programa solicite ingresar el codigo de sucursal (HYO-LIM) y tambien la opcion salir
+	-Si el usuario ingresa el codigo de HYO, el programa debe de mostrar un saludo de bienvenida de la sucursal de Huancayo,
+	adicional a ello el sistema debe de listar las siguientes opciones:
+		Opcion01: Registre un trabajador:
+			-El programa debe de solicitar el nombre y apellido de la persona a registrar seguido de su edad y fecha de nacimiento
+			-El programa debe de validar cada uno de los campos
+				-Nombre y Apellido si el usuario ingresa todo minuscula, el programa debe de convertir la primera letra en mayuscula.
+				-Edad solo debe de poder ingresar numeros enteros positivos
+				-Fecha de nacimiento debe de permitir ingresar solo el formato dd/mm/yyyy, contemplando que solo son numeros enteros positivos (dd,mm,yyyy)
+			-Una vez terminado el registro, el sistema debe de retornar al inicio de las opciones(opciones principal)
+		Opcion02: Listar datos del trabajador
+			-El programa debe de mostrar los datos registrados desde el inicio de la ejecución
+			-Una vez mostrado la lista, el sistema debe de retornar al inicio de las opciones(opciones principal)
+	-Si el usuario ingresa el codigo de LIM, el programa debe de mostrar un saludo de bienvenida de la sucursal de Lima,
+	adicional a ello el sistema debe de listar las siguientes opciones:
+		Opcion01: Registre un producto.
+			-El programa debe de solicitar el nombre del producto, seguido de la cantidad y el precio unitario
+			-El programa debe de validar cada uno de los campos:
+				-Nombre si el usuario ingresa todo minuscula, el programa debe de convertir la primera letra en mayuscula.
+				-Cantidad solo dbe de ingresar numeros enteros positivos
+				-Precio solo debe de ingresar numeros enteros o decimales positivos
+			-Una vez terminado el registro, el sistema debe de retornar al inicio de las opciones(opciones principal)
+		Opcion02:
+			-El programa debe de mostrar los datos registrados desde el inicio de la ejecución
+			-Una vez mostrado la lista, el sistema debe de retornar al inicio de las opciones(opciones principal)
+	-Si el usuario ingresa salir, el programa debe de finalizar todo el proceso.
+
+
+Enviar el trabajo al correo: itolentinos@continental.edu.pe
+Asunto: [Python-022023] - Apellidos y Nombres
+Mensaje: ....
+Archivos:
+	apellidos_nombres_problema01.py
+	apellidos_nombres_problema02.py
+ZIP:
+	apellidos_nombres.zip
+
+
+Fecha de entrega: 02-03-2023 12:59 PM
