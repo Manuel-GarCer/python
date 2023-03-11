@@ -19,6 +19,7 @@ class Auto:
 auto = Auto(100, 10)
 
 # Calcular la velocidad
+
 velocidad = auto.calcular_velocidad()
 
 # Imprimir el resultado
