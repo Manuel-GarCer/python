@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación en Flask</title>
+</head>
+<body>
+    <h1>Hola esta es mi primera APP</h1>
+    <h4>Mi nombre es {{ data['nombre'] }} </h4> <!-- doble {{}} es para mostrar un dato aca es nombre  -->
+
+    <h4>Lista de Participantes:</h4>
+    <ul>
+        {% for elementos in data['participantes'] %}  <!-- aca {% y %} para un bucle en python y con for (inicializamos) -->
+        <li>{{ elementos['nombre'] }}</li>
+        {% endfor %} <!-- aca con endfor (cerramos el for), se le llama ha esto ESTRUCTURAS DE CONTROL -->
+        
+    
+
+
+        
+    </ul>
+</body>
+</html>
