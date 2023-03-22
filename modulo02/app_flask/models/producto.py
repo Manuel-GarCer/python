@@ -1,4 +1,4 @@
-import pandas as pd 
+import pandas as pd  #para importar el paquete pandas y "as pd" es un alias q le ponemos
 
 class Producto:
     def __init__(self, categoria, producto, precio, cantidad, descripcion):
@@ -8,7 +8,7 @@ class Producto:
         self.cantidad = cantidad
         self.descripcion = descripcion
 
-    def crear_producto(self):
+    def crear_producto(self):  # creamos metodo crear_producto
         obj = {
             'categoria': self.categoria,
             'producto': self.producto,
@@ -17,19 +17,19 @@ class Producto:
             'descripcion': self.descripcion
         }
         array = self.get_producto()
-        array.append(obj)
+        array.append(obj) #al array se gregan los objetos
         df = pd.DataFrame(array)
         df.to_csv('files\producto.csv')
         return "Se registró correctamente."
     
-    @staticmethod
-    def get_producto():
+    @staticmethod ## decorador para que no herede el self en la funcion que sigue pero si pertenece a la clase persona
+    def get_producto():  # hace comunicacion entre csv y pandas
         try:
-            df = pd.read_csv('files\producto.csv')
+            df = pd.read_csv('files\producto.csv') #llamo a pandas y su metodo read_csv y entre (la ubicacion de archivo)
         except:
-            df = pd.DataFrame()
+            df = pd.DataFrame() #metdo que usa pandas es DataFrame que es como tablas dinamicas
         array = list()
-        for key, value in df.iterrows():
+        for key, value in df.iterrows(): #iterrow itera en cada fila y columna del dataFrame
             #print(value)
             obj = {
                 'categoria': value[1],
