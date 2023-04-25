@@ -1,0 +1,138 @@
+{% extends 'base.html' %}   <!-- para que con esro herede lo del padre -->
+{% load static %}
+
+{% block titulo %}
+  <title>Formulario Alumno</title>
+{% endblock %}
+
+{% block breadcrumb %}
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Formulario Estudiante</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active">Formulario Estudiante</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h4 class="card-title">Nuevo estudiante</h4>
+          </div>
+          <div class="card-body">
+            <form id="form_create">
+              <div class="row">
+                <div class="col-md-12">
+                  <label>Nombres</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control" maxlength="50" required>
+                </div>
+                <div class="col-md-12">
+                  <label>Apellidos</label>
+                  <input type="text" id="apellido" name="apellido" class="form-control" maxlength="50" required>
+                </div>
+                <div class="col-md-12">
+                  <label>Género</label>
+                  <select type="text" id="genero" name="genero" class="form-control" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <br>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Lista de estudiantes</h4>
+      </div>
+      <div class="col-md-12">
+        <table id="tabla_estudiante" class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Género</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block modals %}
+<div class="modal fade" id="modal-edit">
+  <div class="modal-dialog">
+    <form id="form_edit">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modificar Alumno</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <label>Id</label>
+              <input type="text" id="e_id" name="e_id" class="form-control" readonly required>
+            </div>
+            <div class="col-md-12">
+              <label>Nombres</label>
+              <input type="text" id="e_nombre" name="e_nombre" class="form-control" maxlength="50" required>
+            </div>
+            <div class="col-md-12">
+              <label>Apellidos</label>
+              <input type="text" id="e_apellido" name="e_apellido" class="form-control" maxlength="50" required>
+            </div>
+            <div class="col-md-12">
+              <label>Género</label>
+              <select type="text" id="e_genero" name="e_genero" class="form-control" required>
+                <option value="" selected disabled>Seleccione una opción</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-warning">Actualizar</button>
+        </div>
+      </div>
+    </form>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+{% endblock %}
+
+{% block scriptjs %}
+<script src="{% static 'js/estudiante.ts' %}"></script>
+{% endblock %}
