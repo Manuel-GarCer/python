@@ -23,7 +23,8 @@ from sistema_colegio.views  import view_alumno, view_asignatura
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/', include('app.academico.urls')),
+    path('app/academico', include('app.academico.urls')),
+    path('app/admision', include('app.admision.urls')),
     path('', inicio),
     path('ruta_html', ruta_html),
     path('saludo/<nombre>', ruta_saludo),
