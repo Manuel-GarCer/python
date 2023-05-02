@@ -88,6 +88,12 @@ def view_alumno(request):
     document = template.render(context)
     return HttpResponse(document)
 
+def view_postulante(request):
+    template = loader.get_template('postulante.html')
+    context = {}
+    document = template.render(context)
+    return HttpResponse(document)
+
 def view_asignatura(request):
     template = loader.get_template('asignatura.html')
     context = {}

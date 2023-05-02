@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from sistema_colegio.views  import inicio, ruta_html, ruta_saludo, ruta_saludo2, ruta_html2
 from sistema_colegio.views  import plantilla, plantilla02, plantilla_heredada
-from sistema_colegio.views  import view_alumno, view_asignatura
+from sistema_colegio.views  import view_alumno, view_asignatura, view_postulante
 
 
 urlpatterns = [
@@ -36,4 +36,6 @@ urlpatterns = [
     path('alumno/', view_alumno),
     path('asignatura/', view_asignatura),
     path('estudiante/', view_alumno),
+    path('postulante/', view_postulante),
+
 ]
