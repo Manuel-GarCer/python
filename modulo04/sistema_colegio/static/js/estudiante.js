@@ -14,7 +14,7 @@ return false;
 };
 
 async function create_estudiante(data){
-    let url = '/app/api/estudiante/';
+    let url = '/app/academicoapi/estudiante/';
     const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -30,13 +30,14 @@ async function create_estudiante(data){
 // HACIENDO SELECT AL API /app/api/estudiante
 
 async function list_estudiante(){
-    let url = '/app/api/estudiante/';
+    let url = '/app/academicoapi/estudiante/';
     const response = await fetch(url, {method: "GET"})
     .then(res => res.json())
     .then((res) => {
         let table = document.getElementById('tabla_estudiante').getElementsByTagName('tbody')[0];
         table.innerHTML = "";
         for (let i = 0; i < res.length; i++){
+            //console.log(res[i])
             table.insertRow().innerHTML = "<tr><td>"+res[i].nombre+"</td><td>"+res[i].apellido+"</td><td>"+res[i].genero+"</td><td><button class='btn btn-xs btn-warning' onclick='openmodal_estudiante("+JSON.stringify(res[i])+")'><i class='fa fa-edit'></i></button> <button class='btn btn-xs btn-danger' onclick='delete_estudiante("+res[i].id+")'><i class='fa fa-trash'></i></button></td></tr>";
         }
     });
@@ -46,6 +47,7 @@ list_estudiante();
 
 // HACIENDO SELECT AL UPDATE /app/api/estudiante
 function openmodal_estudiante(data){
+    //console.log(data)
     document.getElementById("e_id").value = data['id']
     document.getElementById("e_nombre").value = data['nombre']
     document.getElementById("e_apellido").value = data['apellido']
@@ -68,7 +70,7 @@ return false;
 };
 
 async function update_estudiante(id, data){
-    let url = '/app/api/estudiante/'+id+'/';
+    let url = '/app/academicoapi/estudiante/'+id+'/';
     const response = await fetch(url, {
         method: "PUT",
         headers: {
@@ -87,7 +89,7 @@ async function update_estudiante(id, data){
 
 async function delete_estudiante(id){
     if (confirm("¿Desea eliminar el registro?")){
-        let url = '/app/api/estudiante/'+id+'/';
+        let url = '/app/academicoapi/estudiante/'+id+'/';
         const response = await fetch(url, {
             method: "DELETE"
         })

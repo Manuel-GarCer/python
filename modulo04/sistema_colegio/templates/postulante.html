@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-md-12">
                   <label>Tipo de Documento</label>
-                  <select type="text" id="tipo-documento" name="tipo-documento" class="form-control" required>
+                  <select type="text" id="tipo_documento" name="tipo_documento" class="form-control" required>
                     <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">DNI</option>
                     <option value="2">Otro</option>
@@ -62,19 +62,7 @@
                     <option value="M">Masculino</option>
                     <option value="F">Femenino</option>
                   </select>
-                </div>
-                <div class="col-md-12">
-                  <label>Perido</label>
-                  <input type="text" id="perido" name="perido" class="form-control" maxlength="6" required>
-                </div>
-                <div class="col-md-12">
-                  <label>Ingreso</label>
-                  <select type="text" id="ingreso" name="ingreso" class="form-control" required>
-                    <option value="" selected disabled>Seleccione una opción</option>
-                    <option value="0">No Ingreso</option>
-                    <option value="1">Ingreso</option>
-                  </select>
-                </div>
+                </div>                
                 <div class="col-md-12">
                   <br>
                   <button type="submit" class="btn btn-primary">Guardar</button>
@@ -92,7 +80,7 @@
         <h4>Lista de estudiantes</h4>
       </div>
       <div class="col-md-12">
-        <table id="tabla_estudiante" class="table table-bordered table-hover">
+        <table id="tabla_postulante" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Nombres</th>
@@ -100,8 +88,6 @@
               <th>Tipo de Documento</th>
               <th>Documento</th>
               <th>Género</th>
-              <th>Periodo</th>
-              <th>Ingreso</th>
               <th>Opciones</th>
             </tr>
           </thead>
@@ -148,23 +134,15 @@
               </select>
             </div>
             <div class="col-md-12">
+              <label>Documento</label>
+              <input type="text" id="e_documento" name="e_documento" class="form-control" maxlength="12" required>
+            </div
+            <div class="col-md-12">
               <label>Género</label>
               <select type="text" id="e_genero" name="e_genero" class="form-control" required>
                 <option value="" selected disabled>Seleccione una opción</option>
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
-              </select>
-            </div>
-            <div class="col-md-12">
-              <label>Periodo</label>
-              <input type="text" id="e_periodo" name="e_periodo" class="form-control" maxlength="50" required>
-            </div>
-            <div class="col-md-12">
-              <label>Ingreso</label>
-              <select type="text" id="e_ingreso" name="e_ingreso" class="form-control" required>
-                <option value="" selected disabled>Seleccione una opción</option>
-                <option value="0">No Ingreso</option>
-                <option value="1">Ingreso</option>
               </select>
             </div>
           </div>
@@ -182,5 +160,5 @@
 {% endblock %}
 
 {% block scriptjs %}
-<script type= "text/javascript" src="{% static 'js/aspirante.js' %}"></script>
+<script type= "text/javascript" src="{% static 'js/postulante.js' %}"></script>
 {% endblock %}
