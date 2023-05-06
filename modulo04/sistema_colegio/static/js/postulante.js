@@ -103,3 +103,5 @@ async function delete_postulante(id){
         .then(res => list_postulante());
     };
 };
+
+
